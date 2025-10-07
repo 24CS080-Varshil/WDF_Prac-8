@@ -48,6 +48,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($stmt->execute()) {
         echo "New record inserted successfully!";
+        header("Location: event.php");
+        exit();
     } else {
         echo "Error inserting record: " . $stmt->error;
     }
